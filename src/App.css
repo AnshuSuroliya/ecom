@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+/* Set the height of the menu to 0 */
+#nav-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+
+/* Show the menu when the button is clicked */
+#nav-toggle:checked ~ #nav-content {
+  height: auto;
+}
+
+/* Hide the button on large screens */
+@media (min-width: 768px) {
+  #nav-toggle {
+    display: none;
+  }
+}

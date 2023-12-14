@@ -1,0 +1,27 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 5px;
+  }
+   
+   
+  table{
+    margin: 0 auto;
+    column-gap: 70px;
+    width: 100%;
+    padding: 10px;
+  }
+   
+  th{
+
+    background-color: rgb(3, 15, 15);
+    padding:5px 20px;
+    color:whitesmoke
+  }
+   
+  .table-data {
+    text-align: center;
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color:rgb(223, 238, 243)
+  }
