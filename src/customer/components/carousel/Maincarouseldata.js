@@ -1,5 +1,6 @@
 export const Maincarouseldata=[
-   { image:"https://m.media-amazon.com/images/I/41Q1MHdq+RL._SY679_.jpg",
-     path:"/women/clothing/suit"
+   { image:"https://images-eu.ssl-images-amazon.com/images/G/31/img2020/img21/apparelGW/dec23atf/unrec/mfd/MA_3000._CB571190800_.jpg",
+   },
+   { image:"https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/GW/MFD/Dec/Unrec-PC-3000-Deals._CB571190788_.jpg"
    }
 ]

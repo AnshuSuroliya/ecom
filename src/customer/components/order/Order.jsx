@@ -23,7 +23,10 @@ const Order=()=>{
     const handleSubmit=(event)=>{
         event.preventDefault();
         dispatch(createOrder(data));
-        navigate("/cart/checkout/payment");
+        setTimeout(()=>{
+          navigate("/cart/checkout/payment");
+        },2000);
+        
     }
 
 return(

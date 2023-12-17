@@ -50,14 +50,15 @@ return(
                 {/* <label className=" top-0 left-0 block text-sm font-medium text-gray-900  ">
                   First Name
                 </label> */}
-                <div className="mb-2">
+                <div className="mb-2 border-b border-teal-500">
                   <input
                     id="firstName"
                     name="firstName"
                     placeholder="First Name"
                     onChange={getUserData}
+        
                     required
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="appearance-none bg-tranparent border-0 w-full rounded-md py-1.5 text-gray-900 shadow-sm leading-tight placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -65,37 +66,43 @@ return(
                 {/* <label className="block text-sm font-medium leading-6 text-gray-900">
                   Last Name
                 </label> */}
-                <div className="mb-2">
+                <div className="mb-2 border-b border-teal-500">
                   <input
                     id="lastName"
                     name="lastName"
                     placeholder="Last Name"
                     required
                     onChange={getUserData}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="appearance-none bg-tranparent border-0 w-full rounded-md py-1.5 text-gray-900 shadow-sm leading-tight placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
               <div>
-                {/* <label className="block text-sm font-medium leading-6 text-gray-900">
-                  Gender
-                </label> */}
+                
                 <div className="mb-2">
-                  <input
+                <label for="gender" className="block text-sm font-medium leading-6 text-gray-900">
+                  Gender
+                </label>
+                <select id="gender" onChange={getUserData} name="gender" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+  <option selected name="gender">Select Gender</option>
+  <option name="gender" value="Male">Male</option>
+  <option value="Female" name="gender">Female</option>
+</select>
+                  {/* <input
                     id="gender"
                     name="gender"
                     placeholder="Gender"
                     required
                     onChange={getUserData}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
+                    className="appearance-none bg-tranparent border-0 w-full rounded-md py-1.5 text-gray-900 shadow-sm leading-tight placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6"
+                  /> */}
                 </div>
               </div>
               <div>
                 {/* <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                   Email address
                 </label> */}
-                <div className="mb-2">
+                <div className="mb-2 border-b border-teal-500">
                   <input
                     id="email"
                     name="email"
@@ -104,7 +111,7 @@ return(
                     autoComplete="email"
                     required
                     onChange={getUserData}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="appearance-none bg-tranparent border-0 w-full rounded-md py-1.5 text-gray-900 shadow-sm leading-tight placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -112,7 +119,7 @@ return(
                 {/* <label className="block text-sm font-medium leading-6 text-gray-900">
                   Contact Number
                 </label> */}
-                <div className="mb-2">
+                <div className="mb-2 border-b border-teal-500">
                   <input
                     id="contactNumber"
                     name="contactNumber"
@@ -121,7 +128,7 @@ return(
                     placeholder="Contact Number"
                     required
                     onChange={getUserData}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="appearance-none bg-tranparent border-0 w-full rounded-md py-1.5 text-gray-900 shadow-sm leading-tight placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -133,7 +140,7 @@ return(
                     Password
                   </label> */}
                 </div>
-                <div className="mb-2">
+                <div className="mb-2 border-b border-teal-500">
                   <input
                     id="password"
                     name="password"
@@ -142,16 +149,22 @@ return(
                     autoComplete="current-password"
                     required
                     onChange={getUserData}
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="appearance-none bg-tranparent border-0 w-full rounded-md py-1.5 text-gray-900 shadow-sm leading-tight placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-lg font-medium leading-6 text-gray-900">
+                
+                <div className="mb-2">
+                <label  for="role" className="block text-sm font-medium leading-6 text-gray-900">
                   Role
                 </label>
-                <div className="mb-2">
-                  <input
+<select id="role" name="role" onChange={getUserData} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+  <option selected>Choose a Role</option>
+  <option name="role" value="User">User</option>
+  <option name="role" value="Seller">Seller</option>
+</select>
+                  {/* <input
                     id="role"
                     type="radio"
                     name="role"
@@ -170,7 +183,7 @@ return(
                     onChange={getUserData}
                     className="ml-5"
                   />
-                  <label for="role">Seller</label>
+                  <label for="role">Seller</label> */}
 
                 </div>
               </div>

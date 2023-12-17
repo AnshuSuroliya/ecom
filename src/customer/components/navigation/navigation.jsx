@@ -186,7 +186,7 @@ if(jwt!=null){
         </ul>
          */}
         
-        <div className="xl:flex items-center space-x-5 items-center mt-4 mr-10 mb-2">
+        <div className="xl:flex items-center space-x-5 items-center mt-3 mr-10 mb-2">
          
           <Link className="flex items-center hover:text-gray-200 " to="/cart">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">

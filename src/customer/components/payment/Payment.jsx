@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import order, { getOrder, payment } from "../../../user/slices/order";
+import { getOrder, payment } from "../../../user/slices/order";
 
 const Payment=()=>{
     const dispatch=useDispatch();
@@ -10,8 +10,10 @@ const Payment=()=>{
     const [paymentId,setPaymentId]=useState();
     const [referenceId,setReferenceId]=useState();
     const [paymentStatus,setPaymentStatus]=useState();
+    const [oData,setOData]=useState();
     const orderData=useSelector((state)=>state.order.orderData);
     const cartData=useSelector((state)=>state.cart.cartData);
+    const loading=useSelector((state)=>state.order.isLoading);
     const paymentData=useSelector((state)=>state.order.paymentData);
     
       const location=useLocation();
@@ -22,16 +24,36 @@ const Payment=()=>{
         userId:userId
     }
     useEffect(()=>{
-      const fetchData=async()=>{
-        await dispatch(getOrder(data));
+      // const fetchData=async()=>{
+        // try{
+        //   const response=await fetch("http://localhost:4500/api/findUserOrders",{
+        //     method:"POST",
+        //     headers:{
+        //       "Authorization":`Bearer ${localStorage.getItem("jwt")}`,
+        //       "Content-Type":"application/json"
+        //     },
+        //     body:JSON.stringify(data)
+        //   });
+        //   const result=await response.json();
+          
+           dispatch(getOrder(data));
+           
+        // }
+        // catch(error){
+        //   console.error("error fetching data",error);
+        // }
         //console.log(orderData);
-      }
-      fetchData();
+      // }
+      // fetchData();
       
-    },[])
+    },[]);
     //console.log(oData);
     const handleClick=()=>{
       dispatch(payment(orderData[0].id));
+    }
+    console.log(loading);
+    if(loading){
+      return <h2>loading...</h2>
     }
     return(
     

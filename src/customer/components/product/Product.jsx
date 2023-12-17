@@ -38,18 +38,18 @@ const Product=()=>{
     return (
    
       <div className="bg-white" >
-        <div className="mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-xl  py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           {showQuickView && <ProductModal id={id} showQuickView={showQuickView} setShowQuickView={setShowQuickView}/>}
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             { products.map(product=>{ 
               return(
                   
-                  <div key= {product.id} className="group relative">
+                  <div key= {product.id} className="group relative shadow-md p-2">
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                       <img
                         src={product.imageUrl}
                         //alt={product.imageAlt}
-                        className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                        className="object-fill object-center lg:h-full lg:w-full fit" 
                       />
                      
                     </div>
@@ -80,7 +80,8 @@ const Product=()=>{
                         </div> */}
                         <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                         </div>
-                      <p className="text-sm font-medium text-gray-900"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <p className="text-sm font-medium text-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         {product.price}</p>

@@ -42,7 +42,7 @@ const Cart=()=>{
         <Link to="/" className="flex justify-left">Home</Link>
         <div className="flex min-h-full flex-1 flex-col justify-center px-3 py-4 lg:px-8">
             
-            <h2 className=" text-2xl font-bold text:color-blue-700 mx-auto" >Shopping Cart</h2>
+            <h2 className=" text-2xl font-bold text:color-blue-700 mx-auto mb-10" >Shopping Cart</h2>
             {items.length===0  ?(<p className="mx-auto">Your Cart is empty</p>)
             :  <div className="mt-7 sm:mx-auto sm:w-full sm:max-w-sm">
                     {items.map(item=>{

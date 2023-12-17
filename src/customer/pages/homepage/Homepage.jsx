@@ -6,8 +6,9 @@ import Product from "../../components/product/Product";
 
 const Homepage=()=>{
     return (
-        <div>
+        <div className="overflow-x-hidden">
        <Navbar/>
+       
        <Product/>
        </div>
     )

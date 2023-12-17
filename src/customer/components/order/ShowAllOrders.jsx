@@ -6,9 +6,14 @@ import "./Table.css";
 const ShowAllOrders=()=>{
     const dispatch=useDispatch();
     const AllData=useSelector((state)=>state.order.showAllData);
+    const {loading}=useSelector((state)=>state.order);
     useEffect(()=>{
         dispatch(showAllOrder());
     },[])
+    if(loading){
+       return <h2>loading...</h2>
+    }
+    console.log(AllData);
     return(
         <div>
             {AllData.length===0 ? (<h2 className="flex justify-center">No Orders Found</h2>) :
