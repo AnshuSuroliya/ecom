@@ -14,7 +14,10 @@ const AddProduct=()=>{
       event.preventDefault();
       console.log(productdata);
       dispatch(addProduct(productdata));
-      navigate("/");
+      setTimeout(()=>{
+        navigate("/");
+      },1000)
+      
     }
 return(
     <div className="flex min-h-full flex-1 flex-col justify-center px-3 py-4 lg:px-8">

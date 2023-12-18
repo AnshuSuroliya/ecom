@@ -8,7 +8,7 @@ const Homepage=()=>{
     return (
         <div className="overflow-x-hidden">
        <Navbar/>
-       
+        <Main/>
        <Product/>
        </div>
     )

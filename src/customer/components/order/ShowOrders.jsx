@@ -5,6 +5,7 @@ import "./Table.css"
 
 const ShowOrders=()=>{
 const disptach=useDispatch();
+const {loading}=useSelector((state)=>state.order);
 const showData=useSelector((state)=>state.order.showOrderData);
 const userId=localStorage.getItem("userId");
 useEffect(()=>{
@@ -14,6 +15,9 @@ useEffect(()=>{
     disptach(showOrder(data));
 },[])
 console.log(showData);
+if(loading){
+    return <h2>loading...</h2>
+}
  return(
     <div>
             {showData.length===0 ? (<h2 className="flex justify-center">No Orders Found</h2>) :

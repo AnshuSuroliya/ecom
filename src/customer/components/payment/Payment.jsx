@@ -53,13 +53,13 @@ const Payment=()=>{
     }
     console.log(loading);
     if(loading){
-      return <h2>loading...</h2>
+      return <h2>...</h2>
     }
     return(
     
         <div className="flex min-h-full flex-1 flex-col justify-center px-3 py-4 lg:px-8">
           <div>
-            <Link to="/">Home/</Link>
+            <Link to="/">Home /</Link>
           {pathNames.map((pathname,index)=>{
             const route=`/${pathNames.slice(0,index+1).join('/')}`;
             const isLast=index===pathNames.length-1;

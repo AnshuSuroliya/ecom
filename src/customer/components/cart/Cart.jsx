@@ -8,6 +8,7 @@ const Cart=()=>{
     const navigate=useNavigate();
     const items=useSelector((state)=>state.cart.displayCart);
     const cartData=useSelector((state)=>state.cart.cartData);
+    const {loading}=useSelector((state)=>state.cart);
     const userId=localStorage.getItem("userId");
     const jwt=localStorage.getItem("jwt");
     const [quantity,setQuantity]=useState(1);
@@ -37,6 +38,9 @@ const Cart=()=>{
     //     dispatch(deleteCartItem(data));
     // }
     console.log(items);
+    if(loading){
+        return <h2>loading...</h2>
+    }
     return (
         <div>
         <Link to="/" className="flex justify-left">Home</Link>
